@@ -1,12 +1,11 @@
 tinymce.PluginManager.add('caption', function(ed, url) {
-	
-	function getCurrentCaption(){
-      var element = ed.selection.getNode();
-      var parent = element.parentElement;
-      if(parent.className === 'image-container') {
-        return parent.getAttribute('data-label');
-      }
-      return '';
+    function getCurrentCaption(){
+	var element = ed.selection.getNode();
+	var parent = element.parentElement;
+	if(parent.className === 'image-container') {
+		return parent.getAttribute('data-label');
+	}
+	return '';
     }
     ed.addButton('caption', {
         text: 'Caption',
